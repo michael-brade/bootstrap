@@ -338,6 +338,7 @@
       complete()
 
     this.hoverState = null
+    this.inState.click = false
 
     return this
   }
