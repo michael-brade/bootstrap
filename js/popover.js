@@ -79,7 +79,7 @@
   // POPOVER PLUGIN DEFINITION
   // =========================
 
-  function Plugin(option) {
+  function Plugin(option, e) {
     return this.each(function () {
       var $this   = $(this)
       var data    = $this.data('bs.popover')
@@ -87,7 +87,7 @@
 
       if (!data && /destroy|hide/.test(option)) return
       if (!data) $this.data('bs.popover', (data = new Popover(this, options)))
-      if (typeof option == 'string') data[option]()
+      if (typeof option == 'string') data[option](e)
     })
   }
 
